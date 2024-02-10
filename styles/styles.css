@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Overpass+Mono&display=swap');
+
+:root{
+    --header-height: 70px;
+    --elements-width: 70%;
+    --maximum-width: 1100px;
+    --color-for-background: rgba(0, 0, 0, 0.5);
+    --border-radius: 0.5rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100dvh;
+}
+
+body {
+    background: url("../assets/img/chica_hacker.jpg") no-repeat center;
+    background-size: cover;
+    font-size: 16px;
+    background-attachment: fixed;
+    color: rgb(255, 255, 255);
+    font-family: 'Lato', sans-serif;
+}
+
+/* PRIMERO POSICIÓN, LUEGO WIDTH-HEIGHT, LUEGO FONTS ETC */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    /* Desde el centro de la caja, muevete un 50% patrás */
+    transform: translateX(-50%);
+    width: var(--elements-width);
+    max-width: var();
+    height: var(--header-height);
+    font-size: 1.2rem;
+    background: var(--color-for-background);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+header ul {
+    display: flex;
+    /* flex-direction: row;  */
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(185, 224, 116);
+    transition: color 0.2s linear;
+}
+/* Usar ":" es para los estados y eventos de los elementos de css,
+ "::" es pseudoelementos*/
+header li a:hover{
+    color: rgb(186, 167, 27);
+}
+
+main {
+    width: var(--elements-width);
+    max-width: var(--maximum-width);
+    padding: 2rem;
+    margin: calc(var(--header-height) + 2rem) auto 0 auto;
+    background: var(--color-for-background);
+    border-radius: var(--border-radius);
+}
+
+.mis_productos{
+    
+}
