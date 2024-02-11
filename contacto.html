@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/be6166e576.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Contacto</title>
@@ -28,29 +28,30 @@
 
             <div id="donde_estamos">
                 <h1>Contacto</h1>
-                <ul>
-                    <li>Correo electrónico: fergusdoo@gmail.com</li>
-                    <li>Teléfono: +393939393939</li>
-                    <li>Dirección: C/Venta de Pantalones, nº212, Jaén</li>
-                </ul>
+                <address class="formas_de_contacto">
+                    <ul>
+                        <li>Correo electrónico: <a href="mailto:fergussdoo@gmail.com" target="_blank">fergussdoo@gmail.com</a></li>
+                        <li>Teléfono: <a href="https://wa.me/+393939393939" target="_blank">+39/393-939-39-39</a></li>
+                        <li>Dirección: <a href="#localizacion">C/Venta de Pantalones, nº212, Jaén</a></li>
+                    </ul>
+                </address>
             </div>
 
-            <div id="localizacion">
+            <div id="localizacion" class="multimedia_container">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12636.948702889189!2d-4.070167187864358!3d37.64362769122497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6dc0aff8452e15%3A0xc4120c403735ee9a!2s23669%20Venta%20de%20Pantalones%2C%20Ja%C3%A9n!5e0!3m2!1ses!2ses!4v1707476383855!5m2!1ses!2ses"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
             <div id="solicitud_de_informacion" class="container_form">
-                <div class="text">
-                    Contacta con nosotros
-                </div>
+                
+                    <h2 class="contacta_con_nosotros">Contacta con nosotros</h2>
+                
                 <form class="solicitud_informacion">
                     <!-- datos_personales -->
                     <!-- DNI, sexo, fecha nac., ciudad, nacionalidad, cód post, teléf, email -->
                     <fieldset>
-                        <legend>Datos personales:</legend>
+                        <legend>Datos personales</legend>
                         <label for="nombre">Nombre:</label>
                         <input type="text" name="nombre" id="nombre" placeholder="Nombre..." required>
 
@@ -62,7 +63,7 @@
 
                         <label for="sexo">Indique su género:</label>
                         <select required>
-                            <option value="vacio"></option>
+                            <option value="vacio" disabled selected>Indique su género...</option>
                             <option value="Masculino">Masculino</option>
                             <option value="Femenino">Femenino</option>
                             <option value="Neutro">Neutro</option>
@@ -89,31 +90,30 @@
                         <label for="correo_electronico">Correo electrónico:</label>
                         <input type="email" name="correo_electronico" id="correo_electronico" required>
 
-                        <input type="submit">
+                        <button class="submit" type="submit">Enviar</button>
                     </fieldset>
                     <!-- formacion -->
                     <!-- Titulaciones, año de inicio y finalización -->
                     <fieldset class="formacion_field">
-                        <legend>Su formación:</legend>
-                        <div>
-                            <label for="titulacion">Su titulación:</label>
-                            <input type="text" name="titulacion" id="titulacion" placeholder="Su titulación..."
-                                optional>
+                        <legend>Su formación</legend>
 
-                            <label for="año_inicio_tit">Año de inicio:</label>
-                            <input type="date" name="año_inicio_tit" id="año_inicio_tit" optional>
+                        <label for="titulacion">Su titulación:</label>
+                        <input type="text" name="titulacion" id="titulacion" placeholder="Su titulación..." optional>
 
-                            <label for="año_fin_tit">Año de finalización:</label>
-                            <input type="date" name="año_fin_tit" id="año_fin_tit" optional>
+                        <label for="año_inicio_tit">Año de inicio:</label>
+                        <input type="date" name="año_inicio_tit" id="año_inicio_tit" optional>
 
-                            <input type="submit">
-                        </div>
+                        <label for="año_fin_tit">Año de finalización:</label>
+                        <input type="date" name="año_fin_tit" id="año_fin_tit" optional>
+
+                        <button class="submit" type="submit">Enviar</button>
+
 
                     </fieldset>
 
                     <!-- idiomas -->
                     <fieldset class="idiomas_field">
-                        <legend>Sus idiomas:</legend>
+                        <legend>Sus idiomas</legend>
                         <label for="idioma">Idioma:</label>
                         <input type="text" name="idioma" id="idioma">
                         <label for="hablado">Hablado:</label>
@@ -140,7 +140,7 @@
                             <option value="regular">Regular</option>
                             <option value="nada">Nada</option>
                         </select>
-                        <input type="submit">
+                        <button class="submit" type="submit">Enviar</button>
                     </fieldset>
                 </form>
             </div>
@@ -148,16 +148,19 @@
         </section>
     </main>
     <footer>
-        <p><a href="pages/contact.html#solicitud_de_informacion" target="_self">Trabaja con nosotros</a></p>
-        <h4>También puedes visitarnos en:</h4>
-        <nav>
-            <ul>
-                <li>Facebook</li>
-                <li>Instagram</li>
-                <li>LinkedIn</li>
-                <a href="#Productos_y_servicios">Productos y Servicios</a>
-            </ul>
-        </nav>
+        <p>También puedes visitarnos en:</p>
+        <ul>
+            <li><a href="https://www.facebook.com/institutomedac" target="_blank"><i
+                        class="fa-brands fa-facebook"></i>Facebook</a>
+            </li>
+            <li><a href="https://www.instagram.com/institutomedac/" target="_blank"><i
+                        class="fa-brands fa-instagram"></i>Instagram</a></li>
+            <li><a href="https://www.linkedin.com/school/medac/" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i>LinkedIn</a>
+            </li>
+            <li><a href="https://twitter.com/institutoMEDAC" target="_blank"><i
+                        class="fa-brands fa-twitter"></i>Twitter</a></li>
+        </ul>
     </footer>
 </body>
 

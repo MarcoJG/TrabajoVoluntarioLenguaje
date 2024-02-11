@@ -1,0 +1,37 @@
+.quienessomos_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.quienessomos_container article {
+    width: calc(50% - 1rem);
+
+}
+
+.quienessomos_container article:nth-child(odd){
+    margin-right: 2rem;
+}
+
+.quienessomos_container article figure {
+    margin: 0;
+    padding: 0;
+}
+
+.quienessomos_container img {
+    width: 100%;
+}
+
+.quienessomos_container:last-child{
+    margin-bottom: 50px;
+}
+
+@media(max-width: 960px) {
+
+    .quienessomos_container article {
+        width: 100%;
+    }
+
+    .quienessomos_container article:nth-child(odd){
+        margin-right: 0;
+    }
+}

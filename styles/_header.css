@@ -1,0 +1,60 @@
+/* PRIMERO POSICIÓN, LUEGO WIDTH-HEIGHT, LUEGO FONTS ETC */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    /* Desde el centro de la caja, muevete un 50% patrás */
+    transform: translateX(-50%);
+    width: var(--elements-width);
+    max-width: var(--maximum-width);
+    height: var(--header-height);
+    font-size: 1.2rem;
+    background: var(--color-for-background);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    z-index: 10;
+}
+
+header ul {
+    display: flex;
+    /* flex-direction: row;  */
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(185, 224, 116);
+    transition: color 0.2s linear;
+    border: none;
+}
+/* Usar ":" es para los estados y eventos de los elementos de css,
+ "::" es pseudoelementos*/
+header li a:hover{
+    color: rgb(186, 167, 27);
+}
+
+@media (max-width: 960px){
+    header {
+        position: relative;
+        height: auto;
+        padding: 1rem 2rem;
+        max-width: 100%;
+        width: 95%;
+    }
+
+    header nav {
+        width: 100%;
+    }
+
+    header ul{
+        width: 100%;
+        flex-direction: column;
+    }
+}

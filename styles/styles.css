@@ -1,10 +1,21 @@
+/* LOS IMPORTS VAN ARRIBA MENOS EN SAS O COMO SE DIGA */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Overpass+Mono&display=swap');
+/* HEADER IMPORT */
+@import "_header.css";
+/* MAIN IMPORT */
+@import "_main.css";
+/* FOOTER IMPORT */
+@import "_footer.css";
+/* FORM IMPORT */
+@import "_contact.css";
+/* QUIENESSOMOS IMPORT */
+@import "_quienessomos.css";
 
 :root{
     --header-height: 70px;
     --elements-width: 70%;
     --maximum-width: 1100px;
-    --color-for-background: rgba(0, 0, 0, 0.5);
+    --color-for-background: rgba(0, 0, 0, 0.7);
     --border-radius: 0.5rem;
 }
 
@@ -15,6 +26,7 @@
 html,
 body {
     min-height: 100dvh;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -26,55 +38,31 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-/* PRIMERO POSICIÓN, LUEGO WIDTH-HEIGHT, LUEGO FONTS ETC */
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    /* Desde el centro de la caja, muevete un 50% patrás */
-    transform: translateX(-50%);
-    width: var(--elements-width);
-    max-width: var();
-    height: var(--header-height);
-    font-size: 1.2rem;
-    background: var(--color-for-background);
-    border-bottom-left-radius: var(--border-radius);
-    border-bottom-right-radius: var(--border-radius);
-}
-
-header ul {
-    display: flex;
-    /* flex-direction: row;  */
-    flex-wrap: wrap;
-    gap: 1rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-header a {
+a {
     text-decoration: none;
-    color: rgb(185, 224, 116);
+    color: rgb(255, 255, 255);
+    border-bottom: 1px dashed rgb(118, 139, 10);
     transition: color 0.2s linear;
 }
-/* Usar ":" es para los estados y eventos de los elementos de css,
- "::" es pseudoelementos*/
-header li a:hover{
-    color: rgb(186, 167, 27);
+
+a:hover {
+    color: rgb(118, 139, 10);
 }
 
-main {
-    width: var(--elements-width);
-    max-width: var(--maximum-width);
-    padding: 2rem;
-    margin: calc(var(--header-height) + 2rem) auto 0 auto;
-    background: var(--color-for-background);
-    border-radius: var(--border-radius);
+.multimedia_container iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.mis_productos{
-    
+.multimedia_container {
+    position: relative;
+}
+
+.multimedia_container::before {
+    display: block;
+    content: "";
+    padding-top: 75%;
 }
