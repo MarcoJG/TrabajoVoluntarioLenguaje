@@ -8,6 +8,7 @@ header {
     left: 50%;
     /* Desde el centro de la caja, muevete un 50% patrás */
     transform: translateX(-50%);
+    transition: top 0.2s ease-out;
     width: var(--elements-width);
     max-width: var(--maximum-width);
     height: var(--header-height);

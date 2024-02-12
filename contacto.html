@@ -30,7 +30,8 @@
                 <h1>Contacto</h1>
                 <address class="formas_de_contacto">
                     <ul>
-                        <li>Correo electrónico: <a href="mailto:fergussdoo@gmail.com" target="_blank">fergussdoo@gmail.com</a></li>
+                        <li>Correo electrónico: <a href="mailto:fergussdoo@gmail.com"
+                                target="_blank">fergussdoo@gmail.com</a></li>
                         <li>Teléfono: <a href="https://wa.me/+393939393939" target="_blank">+39/393-939-39-39</a></li>
                         <li>Dirección: <a href="#localizacion">C/Venta de Pantalones, nº212, Jaén</a></li>
                     </ul>
@@ -44,100 +45,130 @@
             </div>
 
             <div id="solicitud_de_informacion" class="container_form">
-                
-                    <h2 class="contacta_con_nosotros">Contacta con nosotros</h2>
-                
+
+                <h2 class="contacta_con_nosotros">Contacta con nosotros</h2>
+
                 <form class="solicitud_informacion">
                     <!-- datos_personales -->
                     <!-- DNI, sexo, fecha nac., ciudad, nacionalidad, cód post, teléf, email -->
                     <fieldset>
                         <legend>Datos personales</legend>
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" name="nombre" id="nombre" placeholder="Nombre..." required>
+                        <table>
+                            <tr>
+                                <td colspan="2">
+                                    <label for="nombre" class="mt-0">Nombre y apellidos:</label>
+                                    <input type="text" name="nombre" id="nombre" placeholder="Nombre y apellidos..."
+                                        required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="dni">Introduzca su DNI:</label>
+                                    <input type="text" name="dni" id="dni" placeholder="Dni..." required>
+                                </td>
+                                <td>
+                                    <label for="sexo">Indique su género:</label>
+                                    <select required>
+                                        <option value="vacio" disabled selected>Indique su género...</option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Femenino">Femenino</option>
+                                        <option value="Neutro">Neutro</option>
+                                        <option value="Pasapalabra">Pasapalabra</option>
+                                        <option value="No sabe no contesta">No sabe no contesta</option>
+                                        <option value="AWP L96 .308WIN">AWP L96 .308WIN</option>
+                                        <option value="PATOPATOPATOPATO">PATOPATOPATOPATO</option>
+                                    </select>
+                                </td>
+                            </tr>
 
-                        <label for="apellidos">Apellidos:</label>
-                        <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos..." required>
 
-                        <label for="dni">Introduzca su DNI:</label>
-                        <input type="text" name="dni" id="dni" placeholder="Dni..." required>
 
-                        <label for="sexo">Indique su género:</label>
-                        <select required>
-                            <option value="vacio" disabled selected>Indique su género...</option>
-                            <option value="Masculino">Masculino</option>
-                            <option value="Femenino">Femenino</option>
-                            <option value="Neutro">Neutro</option>
-                            <option value="Pasapalabra">Pasapalabra</option>
-                            <option value="No sabe no contesta">No sabe no contesta</option>
-                            <option value="AWP L96 .308WIN">AWP L96 .308WIN</option>
-                        </select>
-
-                        <label for="fecha_de_nacimiento">Fecha de nacimiento:</label>
-                        <input type="date" name="fecha_de_nacimiento" id="fecha_de_nacimiento" required>
-
-                        <label for="ciudad">Ciudad:</label>
-                        <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad..." required>
-
-                        <label for="nacionalidad">Nacionalidad:</label>
-                        <input type="text" name="nacionalidad" id="nacionalidad" placeholder="Nacionalidad..." required>
-
-                        <label for="codigo_postal">Código postal:</label>
-                        <input type="number" name="codigo_postal" id="codigo_postal" required>
-
-                        <label for="telefono">Teléfono</label>
-                        <input type="number" name="telefono" id="telefono" optional>
-
-                        <label for="correo_electronico">Correo electrónico:</label>
-                        <input type="email" name="correo_electronico" id="correo_electronico" required>
+                            <tr>
+                                <td>
+                                    <label for="fecha_de_nacimiento">Fecha de nacimiento:</label>
+                                    <input type="date" name="fecha_de_nacimiento" id="fecha_de_nacimiento" required>
+                                </td>
+                                <td>
+                                    <label for="ciudad">Ciudad:</label>
+                                    <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad..." required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="nacionalidad">Nacionalidad:</label>
+                                    <input type="text" name="nacionalidad" id="nacionalidad"
+                                        placeholder="Nacionalidad..." required>
+                                </td>
+                                <td>
+                                    <label for="codigo_postal">Código postal:</label>
+                                    <input type="number" name="codigo_postal" id="codigo_postal" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="telefono">Teléfono</label>
+                                    <input type="number" name="telefono" id="telefono" optional>
+                                </td>
+                                <td>
+                                    <label for="correo_electronico">Correo electrónico:</label>
+                                    <input type="email" name="correo_electronico" id="correo_electronico" required>
+                                </td>
+                            </tr>
+                        </table>
                     </fieldset>
                     <!-- formacion -->
                     <!-- Titulaciones, año de inicio y finalización -->
                     <fieldset class="formacion_field">
                         <legend>Su formación</legend>
-
-                        <label for="titulacion">Su titulación:</label>
-                        <input type="text" name="titulacion" id="titulacion" placeholder="Su titulación..." optional>
-
-                        <label for="año_inicio_tit">Año de inicio:</label>
-                        <input type="date" name="año_inicio_tit" id="año_inicio_tit" optional>
-
-                        <label for="año_fin_tit">Año de finalización:</label>
-                        <input type="date" name="año_fin_tit" id="año_fin_tit" optional>
-
+                        <table>
+                            <tr>
+                                <td colspan="2">
+                                    <label for="titulacion" class="mt-0">Su titulación:</label>
+                                    <input type="text" name="titulacion" id="titulacion" placeholder="Su titulación..."
+                                        optional>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="año_inicio_tit">Año de inicio:</label>
+                                    <input type="date" name="año_inicio_tit" id="año_inicio_tit" optional>
+                                </td>
+                                <td>
+                                    <label for="año_fin_tit">Año de finalización:</label>
+                                    <input type="date" name="año_fin_tit" id="año_fin_tit" optional>
+                                </td>
+                            </tr>
+                        </table>
 
                     </fieldset>
 
                     <!-- idiomas -->
                     <fieldset class="idiomas_field">
                         <legend>Sus idiomas</legend>
-                        <label for="idioma">Idioma:</label>
-                        <input type="text" name="idioma" id="idioma">
-                        <label for="hablado">Hablado:</label>
+                        <input type="text" name="idioma" id="idioma" placeholder="Idioma...">
                         <select name="hablado" id="hablado" optional>
-                            <option value="vacio"></option>
+                            <option value="vacio" disabled selected>Nivel hablado...</option>
                             <option value="excelente">Excelente</option>
                             <option value="bien">Bien</option>
                             <option value="regular">Regular</option>
                             <option value="nada">Nada</option>
                         </select>
-                        <label for="leido">Leído:</label>
                         <select name="leido" id="leido" optional>
-                            <option value="vacio"></option>
+                            <option value="vacio" disabled selected>Nivel escrito...</option>
                             <option value="excelente">Excelente</option>
                             <option value="bien">Bien</option>
                             <option value="regular">Regular</option>
                             <option value="nada">Nada</option>
                         </select>
-                        <label for="escrito">Escrito:</label>
                         <select name="escrito" id="escrito" optional>
-                            <option value="vacio"></option>
+                            <option value="vacio" disabled selected>Nivel escrito...</option>
                             <option value="excelente">Excelente</option>
                             <option value="bien">Bien</option>
                             <option value="regular">Regular</option>
                             <option value="nada">Nada</option>
                         </select>
-                        <button class="submit" type="submit">Enviar</button>
                     </fieldset>
+                    <button class="submit" type="submit">Enviar</button>
                 </form>
             </div>
 
@@ -158,6 +189,7 @@
                         class="fa-brands fa-twitter"></i>Twitter</a></li>
         </ul>
     </footer>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>

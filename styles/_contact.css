@@ -18,27 +18,33 @@
     margin-top: 200px;
 }
 
-form {
+.solicitud_informacion {
+    display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
-form fieldset {
+.solicitud_informacion fieldset {
     display: flex;
     flex-direction: column;
     margin: 2rem 0 0 0;
 }
 
-form label {
+.solicitud_informacion label {
+    display: block;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
 }
 
-form fieldset input, 
-form fieldset select {
+.solicitud_informacion fieldset input, 
+.solicitud_informacion fieldset select {
     padding: 0.4rem;
+    width: 100%;
+    border: 3px solid rgb(191, 7, 173);
+    border-radius: var(--border-radius);
 }
 
-form .submit {
+.solicitud_informacion .submit {
     width: 300px;
     margin: 2rem 0 1rem 0;
     border-radius: var(--border-radius);
@@ -52,7 +58,7 @@ form .submit {
     text-shadow: 1px 1px 1px black;
 }
 
-form .submit:hover {
+.solicitud_informacion .submit:hover {
     cursor: pointer;
 }
 
@@ -62,7 +68,7 @@ form .submit:hover {
     margin-bottom: -20px;
 }
 
-form legend {
+.solicitud_informacion legend {
     text-align: center;
     padding: 0.5rem 1rem;
     font-weight: bold;
@@ -70,4 +76,9 @@ form legend {
     background: rgb(41,230,39);
     background: linear-gradient(45deg, rgba(41,230,39,1) 0%, rgba(230,249,15,1) 100%);
     border-radius: 2rem;
+}
+
+.solicitud_informacion fieldset:nth-child(3) input, 
+.solicitud_informacion fieldset:nth-child(3) select {
+    margin-top: 1rem;
 }

@@ -66,3 +66,7 @@ a:hover {
     content: "";
     padding-top: 75%;
 }
+
+.mt-0 {
+    margin-top: 0px !important;
+}

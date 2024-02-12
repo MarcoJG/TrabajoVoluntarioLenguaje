@@ -1,2 +1,1 @@
-1) HEADROOM JS
-2) NETLIFY
+Por tanto, me refiero a transformaciones y transiciones de las imágenes (punto 3) y a la utilización de cajas menos genéricas, personalizadas y visibles para tratar de evitar el scroll (punto 4).
